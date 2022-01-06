@@ -13,6 +13,7 @@ public class FixedLayoutFileTemplate extends FileTemplate {
         this.positionOfLineType = builder.positionOfLineType;
         this.sizeOfLineType = builder.sizeOfLineType;
         this.lineTemplates = builder.lineTemplates;
+        this.name = builder.name;
     }
 
     public int getSizeOfLineType() {
@@ -32,6 +33,7 @@ public class FixedLayoutFileTemplate extends FileTemplate {
     public static class Builder {
         private int positionOfLineType;
         private int sizeOfLineType;
+        private String name;
         List<LineTemplate> lineTemplates;
 
         /*
@@ -39,6 +41,11 @@ public class FixedLayoutFileTemplate extends FileTemplate {
          */
         public Builder positionOfLineType(int positionOfLineType) {
             this.positionOfLineType = positionOfLineType;
+            return this;
+        }
+
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 

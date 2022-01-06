@@ -4,7 +4,7 @@ import java.util.List;
 
 public abstract class FileTemplate {
 
-    private String name;
+    protected String name;
     protected List<LineTemplate> lineTemplates;
 
     /**

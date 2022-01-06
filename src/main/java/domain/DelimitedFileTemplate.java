@@ -13,6 +13,7 @@ public class DelimitedFileTemplate extends FileTemplate {
         this.positionOfLineType = builder.positionOfLineType;
         this.delimitedBy = builder.delimitedBy;
         this.lineTemplates = builder.lineTemplates;
+        this.name = builder.name;
     }
 
     public String getDelimitedBy() {
@@ -28,6 +29,7 @@ public class DelimitedFileTemplate extends FileTemplate {
     public static class Builder {
         private int positionOfLineType;
         private String delimitedBy;
+        private String name;
         List<LineTemplate> lineTemplates;
 
         /*
@@ -48,6 +50,11 @@ public class DelimitedFileTemplate extends FileTemplate {
 
         public Builder lineTemplates(List<LineTemplate> lineTemplates) {
             this.lineTemplates = lineTemplates;
+            return this;
+        }
+
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 
